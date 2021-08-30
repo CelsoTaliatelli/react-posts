@@ -1,9 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import './Home.css';
 import { Component } from 'react';
-import { loadPosts } from './components/utils/load-posts';
-import { Posts } from './components/Posts';
-class App extends Component {
+import { loadPosts } from '../../components/utils/load-posts';
+import { Posts } from '../../components/Posts';
+class Home extends Component {
   state = {
     posts: []
   }
@@ -28,4 +27,4 @@ class App extends Component {
 
 }
 
-export default App;
+export default Home;
