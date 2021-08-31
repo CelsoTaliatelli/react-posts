@@ -16,3 +16,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.btn-load{
+  margin-top: 10px;
+  min-height: 60px;
+  align-items: flex-end;
+}
+.button{
+  width: 100%;
+  background-color: darkblue;
+  color:#FFF;
+  border: none;
+  padding: 5px 10px;
+}
