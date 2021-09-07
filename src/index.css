@@ -28,4 +28,10 @@ code {
   color:#FFF;
   border: none;
   padding: 5px 10px;
+  cursor: pointer;
+}
+
+.button:disabled{
+  background-color: #888;
+  cursor: not-allowed;
 }

@@ -12,7 +12,6 @@ class Home extends Component {
   }
   loadPosts = async () => {
     const{page,postsPerPage} = this.state;
-
     const postsAndPhotos = await loadPosts();
     this.setState({ 
       posts: postsAndPhotos.slice(page,postsPerPage),
@@ -38,11 +37,17 @@ class Home extends Component {
   }
 
   render() {
-    const { posts } = this.state;
+    const { posts,page,postsPerPage,allPosts } = this.state;
+    const noMorePosts = page + postsPerPage >= allPosts.length;
+
     return (
       <section className="container">
         <Posts posts={posts}/>
-        <Button text="Load more posts" onClick={this.loadMorePosts}/>
+        <Button 
+          text="Load more posts" 
+          onClick={this.loadMorePosts}
+          disabled={noMorePosts}
+          />
       </section>
 
     );
