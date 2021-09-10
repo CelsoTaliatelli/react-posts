@@ -67,8 +67,6 @@ class Home extends Component {
             handleChange={this.handleChange}
           />
         </div>
-        
-
         {filteredPosts.length > 0 && (
           <Posts posts={filteredPosts}/>
         )} 
